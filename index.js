@@ -1,4 +1,4 @@
-const theBooks = [];
+let theBooks = [];
 
 const addButton = document.querySelector(".button");
 addButton.addEventListener('click', () => {
@@ -17,11 +17,14 @@ addButton.addEventListener('click', () => {
     const bookList = document.querySelector('.book-list');
     bookList.append(bookContainer);
 
-    theBooks.push(
-        {title: inputTitle.value, author: inputAuthor.value}
-    )
-    console.log(theBooks);
+    theBooks.push({title: inputTitle.value, author: inputAuthor.value});
 
     window.localStorage.setItem("booksArray", JSON.stringify(theBooks));
-    
+
+    function removeBook() {        
+        theBooks = theBooks.filter((book) => book.title !== this.parentNode.childNodes[0].innerHTML);
+        localStorage.setItem("booksArray", JSON.stringify(theBooks));        
+        this.parentNode.remove();    }
+
+    removeButton.addEventListener('click', removeBook);
 });
