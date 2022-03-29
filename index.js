@@ -16,4 +16,12 @@ addButton.addEventListener('click', () => {
     bookContainer.append(titleBook, authorBook, removeButton, breakLine);
     const bookList = document.querySelector('.book-list');
     bookList.append(bookContainer);
+
+    theBooks.push(
+        {title: inputTitle.value, author: inputAuthor.value}
+    )
+    console.log(theBooks);
+
+    window.localStorage.setItem("booksArray", JSON.stringify(theBooks));
+    
 });
