@@ -5,7 +5,6 @@ const inputAuthor = document.querySelector('.author');
 const alertMessage = document.querySelector('#alert-message');
 let theBooks = [];
 
-
 function removeBook() {
   theBooks = theBooks.filter((book) => +book.id !== +this.parentNode.childNodes[2].innerHTML);
   this.parentNode.remove();
@@ -38,7 +37,6 @@ function creaateAndAppend(title, author, id) {
   removeButton.addEventListener('click', removeBook);
 }
 
-
 function addBooks() {
   if (
     inputTitle.value !== ''
@@ -57,8 +55,6 @@ function addBooks() {
     alertMessage.style.display = 'initial';
   }
 }
-
-
 
 function loadBooks() {
   theBooks = JSON.parse(localStorage.getItem('booksArray'));
@@ -79,4 +75,3 @@ addButton.addEventListener('mousedown', highLightMessage);
 addButton.addEventListener('mouseup', noHighlightMessage);
 addButton.addEventListener('click', addBooks);
 loadBooks();
-
