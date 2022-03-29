@@ -5,7 +5,7 @@ const inputAuthor = document.querySelector('.author');
 const alertMessage = document.querySelector('#alert-message');
 let theBooks = [];
 
-const storage = localStorage;
+// const storage = localStorage;
 
 function removeBook() {
   theBooks = theBooks.filter((book) => +book.id !== +this.parentNode.childNodes[2].innerHTML);
@@ -15,7 +15,7 @@ function removeBook() {
     bookList.children[i].children[2].innerHTML = i;
     book.id = i;
   });
-  storage.setItem('booksArray', JSON.stringify(theBooks));
+  window.localStorage.setItem('booksArray', JSON.stringify(theBooks));
 }
 
 function creaateAndAppend(title, author, id) {
@@ -47,7 +47,7 @@ function addBooks() {
     creaateAndAppend(inputTitle.value, inputAuthor.value, theBooks.length);
     const bookObj = { title: inputTitle.value, author: inputAuthor.value, id: theBooks.length };
     theBooks.push(bookObj);
-    storage.setItem('booksArray', JSON.stringify(theBooks));
+    window.localStorage.setItem('booksArray', JSON.stringify(theBooks));
 
     inputTitle.value = '';
     inputAuthor.value = '';
@@ -59,7 +59,7 @@ function addBooks() {
 }
 
 function loadBooks() {
-  theBooks = JSON.parse(storage.getItem('booksArray'));
+  theBooks = JSON.parse(window.localStorage.getItem('booksArray'));
   theBooks.forEach((book, i) => {
     creaateAndAppend(book.title, book.author, i);
   });
