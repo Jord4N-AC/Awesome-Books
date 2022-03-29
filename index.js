@@ -28,4 +28,7 @@ addButton.addEventListener('click', () => {
   }
 
   removeButton.addEventListener('click', removeBook);
+
+  inputTitle.value = '';
+  inputAuthor.value = '';
 });
