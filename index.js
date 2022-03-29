@@ -59,10 +59,12 @@ function addBooks() {
 }
 
 function loadBooks() {
-  theBooks = JSON.parse(window.localStorage.getItem('booksArray'));
-  theBooks.forEach((book, i) => {
+  // window.localStorage.setItem('booksArray', JSON.stringify(theBooks));
+  JSON.parse(window.localStorage.getItem('booksArray')).forEach((book, i) => {
     creaateAndAppend(book.title, book.author, i);
   });
+
+  theBooks = JSON.parse(window.localStorage.getItem('booksArray'));
 }
 
 function highLightMessage() {
