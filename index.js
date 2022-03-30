@@ -15,7 +15,7 @@ function removeBook() {
     bookList.children[i].children[2].innerHTML = i;
     book.id = i;
   });
-  window.localStorage.setItem('booksArray', JSON.stringify(theBooks));
+  localStorage.setItem('booksArray', JSON.stringify(theBooks));
 }
 
 function creaateAndAppend(title, author, id) {
@@ -47,7 +47,7 @@ function addBooks() {
     creaateAndAppend(inputTitle.value, inputAuthor.value, theBooks.length);
     const bookObj = { title: inputTitle.value, author: inputAuthor.value, id: theBooks.length };
     theBooks.push(bookObj);
-    window.localStorage.setItem('booksArray', JSON.stringify(theBooks));
+    localStorage.setItem('booksArray', JSON.stringify(theBooks));
 
     inputTitle.value = '';
     inputAuthor.value = '';
@@ -59,12 +59,11 @@ function addBooks() {
 }
 
 function loadBooks() {
-  // window.localStorage.setItem('booksArray', JSON.stringify(theBooks));
-  JSON.parse(window.localStorage.getItem('booksArray')).forEach((book, i) => {
+  JSON.parse(localStorage.getItem('booksArray')).forEach((book, i) => {
     creaateAndAppend(book.title, book.author, i);
   });
 
-  theBooks = JSON.parse(window.localStorage.getItem('booksArray'));
+  theBooks = JSON.parse(localStorage.getItem('booksArray'));
 }
 
 function highLightMessage() {
