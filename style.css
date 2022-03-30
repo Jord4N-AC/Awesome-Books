@@ -1,0 +1,29 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#alert-message {
+  display: none;
+  font-size: 16px;
+  font-weight: bolder;
+  color: rgb(240, 73, 73);
+  background-color: rgb(73, 198, 207);
+  padding: 10px;
+  border: 4px solid rgb(169, 149, 207);
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0 0 5px rgb(117, 107, 107);
+  transition: all 0.3s;
+}
