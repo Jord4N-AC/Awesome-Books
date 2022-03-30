@@ -5,7 +5,6 @@ const inputAuthor = document.querySelector('.author');
 const alertMessage = document.querySelector('#alert-message');
 let theBooks = [];
 
-// const storage = localStorage;
 
 function removeBook() {
   theBooks = theBooks.filter((book) => +book.id !== +this.parentNode.childNodes[2].innerHTML);
@@ -39,14 +38,23 @@ function creaateAndAppend(title, author, id) {
   removeButton.addEventListener('click', removeBook);
 }
 
+class BookObject {
+  constructor(title, author, id) {
+    this.title = title;
+    this.author = author;
+    this.id = id;
+  }
+}
+
+
 function addBooks() {
   if (
     inputTitle.value !== ''
     && inputAuthor.value !== ''
   ) {
     creaateAndAppend(inputTitle.value, inputAuthor.value, theBooks.length);
-    const bookObj = { title: inputTitle.value, author: inputAuthor.value, id: theBooks.length };
-    theBooks.push(bookObj);
+    const newBook = new BookObject(inputTitle.value, inputAuthor.value, theBooks.length);
+    theBooks.push(newBook);
     localStorage.setItem('booksArray', JSON.stringify(theBooks));
 
     inputTitle.value = '';
