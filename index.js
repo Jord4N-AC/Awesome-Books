@@ -5,7 +5,6 @@ const inputAuthor = document.querySelector('.author');
 const alertMessage = document.querySelector('#alert-message');
 let theBooks = [];
 
-
 class BookObject {
   constructor(title, author, id) {
     this.title = title;
@@ -27,18 +26,18 @@ class BookObject {
       titleBook.classList.add('book-title');
       authorBook.classList.add('book-author');
       removeButton.classList.add('remove-btn');
-    
+
       titleBook.innerHTML = `${title}&nbsp;`;
       authorBook.innerHTML = `by ${author}&nbsp;`;
       idBook.innerHTML = id;
       removeButton.innerHTML = 'Remove';
-    
+
       idBook.style.display = 'none';
-    
+
       infoContainer.append(titleBook, authorBook, idBook);
       bookContainer.append(infoContainer, removeButton);
       bookList.append(bookContainer);
-    
+
       BookObject.remove(removeButton);
     }
     creaateAndAppend(this.title, this.author, this.id);
@@ -60,7 +59,6 @@ class BookObject {
     element.addEventListener('click', removeBook);
   }
 }
-
 
 function addBooks() {
   if (
