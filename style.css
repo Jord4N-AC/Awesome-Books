@@ -1,29 +1,132 @@
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(to bottom right, rgba(199, 165, 102, 0.245), rgba(105, 92, 97, 0.268));
 }
 
-h1 {
+#books-header {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bolder;
+}
+
+.book-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  padding: 20px 40px;
+  border-radius: 8px;
+  margin: 2% auto;
+  box-shadow: 0 0 20px rgb(86, 126, 131);
+  max-width: 750px;
+}
+
+.book-info {
+  display: flex;
+  align-items: baseline;
+}
+
+.book-info h5 {
+  margin: 20px auto;
+}
+
+.book-title {
+  font-size: 30px;
+}
+
+.book-author {
+  font-size: 26px;
+  font-weight: lighter;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.remove-btn {
+  background-color: rgb(214, 204, 197);
+}
+
+.remove-btn:hover {
+  color: white;
+  background-color: rgb(232, 181, 145);
+}
+
+.remove-btn:active {
+  color: initial;
+  background-color: rgb(214, 204, 197);
 }
 
 form {
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom right, rgba(221, 233, 56, 0.243), rgba(197, 77, 233, 0.311));
+  padding: 40px 0;
+  margin: 15% auto;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+fieldset {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 0;
+  margin: 10px auto;
+  border: none;
+  max-width: 100px;
+}
+
+legend {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+input {
+  display: inline-block;
+  font-size: 18px;
+  padding: 10px;
+  margin: 8px auto;
+  width: 350px;
 }
 
 #alert-message {
   display: none;
+  text-align: center;
   font-size: 16px;
   font-weight: bolder;
-  color: rgb(240, 73, 73);
-  background-color: rgb(73, 198, 207);
+  color: rgb(53, 49, 49);
+  background-color: rgb(153, 170, 182);
   padding: 10px;
-  border: 4px solid rgb(169, 149, 207);
+  border: 4px solid rgb(198, 189, 203);
   border-radius: 5px;
-  margin: 10px;
-  box-shadow: 0 0 5px rgb(117, 107, 107);
+  margin: 10px auto;
+  width: 200px;
+  box-shadow: 0 0 5px rgb(238, 175, 238);
   transition: all 0.3s;
+}
+
+#add-btn {
+  font-weight: bold;
+  background-color: rgb(97, 215, 148);
+  color: white;
+  padding: 15px;
+  margin: 8px 0 8px auto;
+  width: 150px;
+  transition: all 0.3s;
+}
+
+#add-btn:hover {
+  box-shadow: 0 0 10px white;
+}
+
+#add-btn:active {
+  color: initial;
+  box-shadow: none;
 }
