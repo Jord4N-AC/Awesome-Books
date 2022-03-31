@@ -5,7 +5,7 @@
 
 > This project is a collaborative work on Awesome-books, which focuses on adding and removing books to and from a library using the DOM manipulation tecniques.
 
-## Links
+## Live Link
 See live version [here](https://jord4n-ac.github.io/Awesome-books/index.html)
 
 
