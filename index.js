@@ -67,9 +67,9 @@ class BookObject {
       const newBook = new BookObject(inputTitle.value, inputAuthor.value, theBooks.length);
       newBook.add();
       theBooks.push(newBook);
-  
+
       localStorage.setItem('booksArray', JSON.stringify(theBooks));
-  
+
       inputTitle.value = '';
       inputAuthor.value = '';
       alertMessage.style.display = 'none';
