@@ -14,10 +14,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-image: linear-gradient(to bottom right, rgba(127, 255, 212, 0.786), rgba(127, 170, 226, 0.895));
-
-  /* background-color: aquamarine; */
-
+  background-color: whitesmoke;
   padding: 20px 40px;
   border-radius: 8px;
   margin: 2% auto;
