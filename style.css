@@ -159,3 +159,18 @@ input {
 .navbar a {
   text-decoration: none;
 }
+
+.add-new {
+  border-left : 2px solid black;
+   border-right : 2px solid black;
+   padding: 0 5px;
+}
+
+.book-list{
+  border: 2px solid black;
+}
+
+.Copyright {
+  border: 2px solid black ;
+  padding: 15px;
+}
