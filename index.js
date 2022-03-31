@@ -58,34 +58,34 @@ class BookObject {
 
     element.addEventListener('click', removeBook);
   }
-}
 
-function addBooks() {
-  if (
-    inputTitle.value !== ''
-    && inputAuthor.value !== ''
-  ) {
-    const newBook = new BookObject(inputTitle.value, inputAuthor.value, theBooks.length);
-    newBook.add();
-    theBooks.push(newBook);
-
-    localStorage.setItem('booksArray', JSON.stringify(theBooks));
-
-    // inputTitle.value = '';
-    // inputAuthor.value = '';
-    alertMessage.style.display = 'none';
-  } else {
-    alertMessage.textContent = 'Empty field';
-    alertMessage.style.display = 'initial';
+  static addBooks() {
+    if (
+      inputTitle.value !== ''
+      && inputAuthor.value !== ''
+    ) {
+      const newBook = new BookObject(inputTitle.value, inputAuthor.value, theBooks.length);
+      newBook.add();
+      theBooks.push(newBook);
+  
+      localStorage.setItem('booksArray', JSON.stringify(theBooks));
+  
+      inputTitle.value = '';
+      inputAuthor.value = '';
+      alertMessage.style.display = 'none';
+    } else {
+      alertMessage.textContent = 'Empty field';
+      alertMessage.style.display = 'initial';
+    }
   }
-}
 
-function loadBooks() {
-  JSON.parse(localStorage.getItem('booksArray')).forEach((book, i) => {
-    const newBook = new BookObject(book.title, book.author, i);
-    newBook.add();
-    theBooks.push(newBook);
-  });
+  static loadBooks() {
+    JSON.parse(localStorage.getItem('booksArray')).forEach((book, i) => {
+      const newBook = new BookObject(book.title, book.author, i);
+      newBook.add();
+      theBooks.push(newBook);
+    });
+  }
 }
 
 function highLightMessage() {
@@ -98,5 +98,6 @@ function noHighlightMessage() {
 
 addButton.addEventListener('mousedown', highLightMessage);
 addButton.addEventListener('mouseup', noHighlightMessage);
-addButton.addEventListener('click', addBooks);
-loadBooks();
+addButton.addEventListener('click', BookObject.addBooks);
+
+BookObject.loadBooks();
