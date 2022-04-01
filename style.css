@@ -1,14 +1,20 @@
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(199, 165, 102, 0.245),
-    rgba(105, 92, 97, 0.268));
-
-    min-height: 100vh;
+  font-family:
+    "Lucida Sans",
+    "Lucida Sans Regular",
+    "Lucida Grande",
+    "Lucida Sans Unicode",
+    Geneva,
+    Verdana,
+    sans-serif;
+  background-image:
+    linear-gradient(
+      to bottom right,
+      rgba(199, 165, 102, 0.245),
+      rgba(105, 92, 97, 0.268)
+    );
+  min-height: 100vh;
 }
-
 
 .navbar {
   display: flex;
@@ -104,11 +110,12 @@ button {
 
 form {
   box-sizing: border-box;
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(221, 233, 56, 0.243),
-    rgba(197, 77, 233, 0.311)
-  );
+  background-image:
+    linear-gradient(
+      to bottom right,
+      rgba(221, 233, 56, 0.243),
+      rgba(197, 77, 233, 0.311)
+    );
   padding: 40px 0;
   margin: 15% auto;
   border-radius: 10px;
@@ -175,17 +182,17 @@ input {
 }
 
 .add-new {
-  border-left : 2px solid black;
-   border-right : 2px solid black;
-   padding: 0 5px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  padding: 0 5px;
 }
 
-.book-list{
+.book-list {
   border: 2px solid black;
 }
 
 .Copyright {
-  border: 2px solid black ;
+  border: 2px solid black;
   padding: 15px;
 }
 
