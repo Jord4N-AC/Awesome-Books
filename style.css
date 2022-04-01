@@ -174,3 +174,13 @@ input {
   border: 2px solid black ;
   padding: 15px;
 }
+
+#contact {
+  max-width: max-content;
+  margin: 0 auto;
+}
+
+#contact h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
