@@ -4,8 +4,42 @@ body {
   background-image: linear-gradient(
     to bottom right,
     rgba(199, 165, 102, 0.245),
-    rgba(105, 92, 97, 0.268)
-  );
+    rgba(105, 92, 97, 0.268));
+
+    min-height: 100vh;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15%;
+  flex-wrap: wrap;
+  margin: auto;
+  border: 2px solid black;
+}
+
+#bar-header {
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.nav-list a,
+.navbar a {
+  text-decoration: none;
+}
+
+#list-link {
+  font-weight: bold;
+}
+
+#books {
+  display: block;
 }
 
 #books-header {
@@ -140,26 +174,6 @@ input {
   box-shadow: none;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 15%;
-  flex-wrap: wrap;
-  margin: auto;
-  border: 2px solid black;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-.nav-list a,
-.navbar a {
-  text-decoration: none;
-}
-
 .add-new {
   border-left : 2px solid black;
    border-right : 2px solid black;
@@ -177,10 +191,15 @@ input {
 
 #contact {
   max-width: max-content;
+  height: 90vh;
   margin: 0 auto;
 }
 
 #contact h2 {
   font-size: 30px;
   font-weight: bold;
+}
+
+.section {
+  display: none;
 }

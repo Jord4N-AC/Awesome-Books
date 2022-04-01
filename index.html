@@ -11,16 +11,17 @@
   <body>
     <nav class="navbar">
       <div>
-        <a href="">Awesome Books</a>
+        <h3 id="bar-header">Awesome Books</h3>                
       </div>
       <div class="nav-list">
-        <a href="#books-header">List</a>
-        <a class="add-new" href="#list">Add New</a>
-        <a href="#contact">Contact</a>
+        <a id="list-link" class="link" href="#books-header">List</a>
+        <a id="add-new-link" class="link" class="add-new" href="#form">Add New</a>
+        <a id="contact-link" class="link" href="#contact">Contact</a>
       </div>
     </nav>
+
     <!-- Section 1 -->
-    <section class="books">
+    <section id="books" class="section">
       <h1 id="books-header">Awesome Books</h1>
       <div class="book-list">
         <!-- All books here -->
@@ -28,7 +29,7 @@
     </section>
 
     <!-- Section 2 -->
-    <form>
+    <form id="form" class="section">
       <fieldset>
         <legend id="list">Add a new book</legend>
         <input type="text" class="title" placeholder="Title" />
@@ -39,7 +40,7 @@
     </form>
 
     <!-- Section 3 -->
-    <section id="contact">
+    <section id="contact" class="section">
       <h2>Contact information</h2>
       <p>Do you have any questions or do you just want to say "hello"?</p>
       <p>You can reachout to us</p>
@@ -49,7 +50,7 @@
         <li>our address: strict name 22,84503,Canada</li>
       </ul>
     </section>
-    
+
     <footer>
       <h5 class="Copyright">Copyright</h5>
     </footer>
