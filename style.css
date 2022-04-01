@@ -1,6 +1,11 @@
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(to bottom right, rgba(199, 165, 102, 0.245), rgba(105, 92, 97, 0.268));
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(199, 165, 102, 0.245),
+    rgba(105, 92, 97, 0.268)
+  );
 }
 
 #books-header {
@@ -65,7 +70,11 @@ button {
 
 form {
   box-sizing: border-box;
-  background-image: linear-gradient(to bottom right, rgba(221, 233, 56, 0.243), rgba(197, 77, 233, 0.311));
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(221, 233, 56, 0.243),
+    rgba(197, 77, 233, 0.311)
+  );
   padding: 40px 0;
   margin: 15% auto;
   border-radius: 10px;
@@ -129,4 +138,24 @@ input {
 #add-btn:active {
   color: initial;
   box-shadow: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15%;
+  flex-wrap: wrap;
+  margin: auto;
+  border: 2px solid black;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.nav-list a,
+.navbar a {
+  text-decoration: none;
 }
