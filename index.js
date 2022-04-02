@@ -80,12 +80,12 @@ class BookObject {
   }
 
   static loadBooks() { 
-    const data =JSON.parse(localStorage.getItem('booksArray')); 
-    if(data != null) { 
-    data.forEach((book, i) => { 
-      const newBook = new BookObject(book.title, book.author, i);
-      newBook.add(); theBooks.push(newBook); }); 
-    } 
+    const data = JSON.parse(localStorage.getItem('booksArray'));
+    if(data != null) {
+    data.forEach((book, i) => {
+    const newBook = new BookObject(book.title, book.author, i);
+    newBook.add(); theBooks.push(newBook); });
+    }
   }
 }
 function highLightMessage() {
