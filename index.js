@@ -79,11 +79,15 @@ class BookObject {
     }
   }
 
-  static loadBooks() { const data =JSON.parse(localStorage.getItem('booksArray')); 
-  if(data != null) { data.forEach((book, i) => { const newBook = new BookObject(book.title, book.author, i);
-    newBook.add(); theBooks.push(newBook); }); } } 
+  static loadBooks() { 
+    const data =JSON.parse(localStorage.getItem('booksArray')); 
+    if(data != null) { 
+    data.forEach((book, i) => { 
+      const newBook = new BookObject(book.title, book.author, i);
+      newBook.add(); theBooks.push(newBook); }); 
+    } 
+  }
 }
-
 function highLightMessage() {
   alertMessage.style.transform = 'scale(1.15)';
 }
