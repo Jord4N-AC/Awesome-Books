@@ -84,7 +84,7 @@ class BookObject {
     if (data != null) {
       data.forEach((book, i) => {
         const newBook = new BookObject(book.title, book.author, i);
-        newBook.add(); theBooks.push(newBook); 
+        newBook.add(); theBooks.push(newBook);
       });
     }
   }
